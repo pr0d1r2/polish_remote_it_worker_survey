@@ -1,3 +1,11 @@
 Survey that collects statistics about polish remote workers within IT sector.
 
 This is tool created for my wife's thesis in college.
+
+
+Deployment
+
+Application is deployed on Heroku hosting.
+Steps needed to setup application there:
+
+bundle exec heroku create polish-remote-it-worker-survey --stack bamboo-mri-1.9.2
