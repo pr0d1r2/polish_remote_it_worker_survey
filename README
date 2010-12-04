@@ -23,3 +23,15 @@ git checkout README
 git checkout Gemfile
 # insert "gem 'pg'" into Gemfile
 bundle install
+
+
+Testing environment
+
+Application is written in BDD way using cucumber, capybara and rspec.
+Steps needed for initial Testing setup:
+
+# add gems to Gemfile within "test" group: capybara, database_cleaner, cucumber-rail, cucumber, rspec-rails, autotest, spork, launchy
+bundle install
+rails generate rspec:install
+rails generate cucumber:install --rspec --cabybara
+AUTOFEATURE=true autotest
