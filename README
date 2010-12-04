@@ -9,3 +9,17 @@ Application is deployed on Heroku hosting.
 Steps needed to setup application there:
 
 bundle exec heroku create polish-remote-it-worker-survey --stack bamboo-mri-1.9.2
+
+
+Rails setup
+
+Application is initially build on Rails 3.0.3
+Steps needed for initial Rails setup:
+
+# insert "gem 'rails'" into Gemfile
+bundle install
+bundle exec rails new ../polish_remote_it_worker_survey -d postgresql -T -J -f
+git checkout README
+git checkout Gemfile
+# insert "gem 'pg'" into Gemfile
+bundle install
