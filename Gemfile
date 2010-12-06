@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.3'
 gem 'pg', '0.10.0'
+gem 'haml', '3.0.24'
 
 group :development do
   gem 'heroku', '1.14.6'
@@ -17,4 +18,5 @@ group :test do
   gem 'autotest', '4.4.6'
   gem 'spork', '0.8.4'
   gem 'launchy', '0.3.7'
+  gem 'rspec_tag_matchers', '1.0.0'
 end
