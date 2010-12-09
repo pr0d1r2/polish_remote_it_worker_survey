@@ -6,6 +6,8 @@ gem 'haml', '3.0.24'
 
 group :development do
   gem 'heroku', '1.14.6'
+  gem 'wirble'
+  gem 'hirb'
 end
 
 group :test do
