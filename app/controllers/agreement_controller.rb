@@ -1,0 +1,2 @@
+class AgreementController < ApplicationController
+end

@@ -1,4 +1,4 @@
-Feature: Welcome 
+Feature: Welcome
 
   Scenario: Entering page
     When I go to the welcome page
