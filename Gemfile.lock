@@ -32,6 +32,7 @@ GEM
     arel (2.0.6)
     autotest (4.4.6)
       ZenTest (>= 4.4.1)
+    awesome_print (0.3.1)
     builder (2.1.2)
     capybara (0.4.0)
       celerity (>= 0.7.9)
@@ -143,6 +144,7 @@ PLATFORMS
 
 DEPENDENCIES
   autotest (= 4.4.6)
+  awesome_print
   capybara (= 0.4.0)
   cucumber (= 0.9.4)
   cucumber-rails (= 0.3.2)

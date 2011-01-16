@@ -8,6 +8,7 @@ group :development do
   gem 'heroku', '1.14.6'
   gem 'wirble'
   gem 'hirb'
+  gem 'awesome_print'
 end
 
 group :test do
