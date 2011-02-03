@@ -13,7 +13,7 @@ describe 'welcome/index' do
 
     it { should have_tag('p#description') }
 
-    it { should have_tag('a[href=path]')}
+    it { should have_tag('a[href=path]') }
   end
 
 end
