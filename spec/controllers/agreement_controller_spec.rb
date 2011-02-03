@@ -3,12 +3,16 @@ require 'spec_helper'
 describe AgreementController do
 
   describe "#index" do
-    before { get :index }
-    subject { response }
+    describe "response" do
+      it_should_behave_like "response_from_default_index_action"
+    end
 
-    it { should be_success }
+    describe "route" do
+      subject { { :get => "/agreement" } }
 
-    it { should render_template 'index' }
+      it { should route_to(:controller => "agreement", :action => "index") }
+    end
   end
+
 
 end
