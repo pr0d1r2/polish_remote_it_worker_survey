@@ -19,6 +19,7 @@ group :test do
   gem 'cucumber-rails', '0.3.2'
   gem 'cucumber', '0.9.4'
   gem 'autotest', '4.4.6'
+  gem 'autotest-notification', '2.3.1'
   gem 'spork', '0.8.4'
   gem 'launchy', '0.3.7'
   gem 'rspec_tag_matchers', '1.0.0'

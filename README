@@ -23,6 +23,8 @@ git checkout README
 git checkout Gemfile
 # insert "gem 'pg'" into Gemfile
 bundle install
+# setup for autotest-notification
+an-install
 
 
 Testing environment
