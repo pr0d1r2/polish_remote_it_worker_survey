@@ -14,5 +14,4 @@ describe AgreementController do
     end
   end
 
-
 end
