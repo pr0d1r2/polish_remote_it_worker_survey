@@ -12,8 +12,8 @@ group :development do
 end
 
 group :test do
-  gem 'rspec', '2.2.0'
-  gem 'rspec-rails', '2.2.1'
+  gem 'rspec', '2.4.0'
+  gem 'rspec-rails', '2.4.1'
   gem 'capybara', '0.4.0'
   gem 'database_cleaner', '0.6.0'
   gem 'cucumber-rails', '0.3.2'
