@@ -1,0 +1,19 @@
+- @title = @pss_questionaire.title
+
+%h1= @pss_questionaire.name
+
+%h2= @pss_questionaire.author
+
+%p= @pss_questionaire.description
+
+= form_for @pss_questionaire do |f|
+  %ol
+    - @pss_questionaire.fields.each_with_index do |field, i|
+      %li
+        %div= PssQuestionaire::FIELDS[i]
+        - 0.upto(4) do |n|
+          %span= n
+          = f.radio_button("field_#{i+1}", n)
+
+  #next
+    = f.submit("Następny")

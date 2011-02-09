@@ -4,7 +4,7 @@ describe 'agreement/index' do
 
   describe 'response' do
     subject do
-      view.stub!(:pss_questionaire_path => 'path')
+      view.stub!(:new_pss_questionaire_path => 'path')
       render
       rendered
     end

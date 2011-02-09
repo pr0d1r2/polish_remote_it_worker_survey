@@ -15,5 +15,5 @@ Feature: Agreement
 
     And I should see "Oświadczam, iż przeczytałem/am wszystkie powyższe stwierdzenia i dobrowolnie zgadzam się na uczestnictwo w badaniach." by checkbox
 
-    And I should see "Kontynuuj" within pss_questionaire link
+    And I should see "Kontynuuj" within new_pss_questionaire link
 
