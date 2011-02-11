@@ -2,48 +2,18 @@ require 'spec_helper'
 
 describe PssQuestionaire do
 
-  describe "FIELDS" do
-    subject { PssQuestionaire::FIELDS }
+  let(:the_class) { PssQuestionaire }
+  let(:number_of_fields) { 14 }
+  let(:table_name) { "pss_questionaires" }
 
-    its(:size) { should == 14 }
-  end
-
-  describe "TITLE" do
-    subject { PssQuestionaire::TITLE }
-
-    its(:size) { should > 0 }
-  end
-
-  describe "NAME" do
-    subject { PssQuestionaire::NAME }
-
-    its(:size) { should > 0 }
-  end
+  it_should_behave_like "questionaire"
 
   describe "AUTHOR" do
-    subject { PssQuestionaire::AUTHOR }
+    subject { the_class::AUTHOR }
 
     its(:size) { should > 0 }
   end
 
-  describe "DESCRIPTION" do
-    subject { PssQuestionaire::DESCRIPTION }
-
-    its(:size) { should > 0 }
-  end
-
-  describe "class ancestors" do
-    subject { PssQuestionaire.ancestors }
-
-    it { should include Questionaire }
-  end
-
-  describe "class" do
-    subject { PssQuestionaire }
-
-    its(:table_name) { should =="pss_questionaires" }
-  end
-
-  its(:author) { should == PssQuestionaire::AUTHOR }
+  its(:author) { should == the_class::AUTHOR }
 
 end
