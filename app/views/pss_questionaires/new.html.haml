@@ -10,7 +10,7 @@
   %ol
     - @pss_questionaire.fields.each_with_index do |field, i|
       %li
-        %div= PssQuestionaire::FIELDS[i]
+        %div= field
         - 0.upto(4) do |n|
           %span= n
           = f.radio_button("field_#{i+1}", n)
