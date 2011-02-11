@@ -1,0 +1,17 @@
+- @title = @olbi_questionaire.title
+
+%h1= @olbi_questionaire.name
+
+%p= @olbi_questionaire.description
+
+= form_for @olbi_questionaire do |f|
+  %ol
+    - @olbi_questionaire.fields.each_with_index do |field, i|
+      %li
+        %div= field
+        - 1.upto(4) do |n|
+          %span= n
+          = f.radio_button("field_#{i+1}", n)
+
+  #next
+    = f.submit("Następny")
