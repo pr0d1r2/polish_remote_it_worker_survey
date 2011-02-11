@@ -32,14 +32,18 @@ describe PssQuestionaire do
     its(:size) { should > 0 }
   end
 
-  its(:title) { should == PssQuestionaire::TITLE }
+  describe "class ancestors" do
+    subject { PssQuestionaire.ancestors }
 
-  its(:name) { should == PssQuestionaire::NAME }
+    it { should include Questionaire }
+  end
+
+  describe "class" do
+    subject { PssQuestionaire }
+
+    its(:table_name) { should =="pss_questionaires" }
+  end
 
   its(:author) { should == PssQuestionaire::AUTHOR }
-
-  its(:description) { should == PssQuestionaire::DESCRIPTION }
-
-  its(:fields) { should == PssQuestionaire::FIELDS }
 
 end

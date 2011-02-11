@@ -1,6 +1,8 @@
 # coding: utf-8
 
-class OlbiQuestionaire < ActiveRecord::Base
+class OlbiQuestionaire < Questionaire
+
+  set_table_name "olbi_questionaires"
 
   FIELDS = [
     "Zawsze odnajduję nowe i interesujące aspekty mojej pracy",
@@ -26,21 +28,5 @@ class OlbiQuestionaire < ActiveRecord::Base
   NAME = "KWESTIONARIUSZ OLBI"
 
   DESCRIPTION = "Poniżej znajdują się stwierdzenia, z którymi ludzie się zgadzają lub nie zgadzają. Używając zaproponowanej skali odpowiedzi, proszę wskazać, w jakim stopniu Pani/Pan zgadza się z danym stwierdzeniem."
-
-  def title
-    self.class::TITLE
-  end
-
-  def name
-    self.class::NAME
-  end
-
-  def description
-    self.class::DESCRIPTION
-  end
-
-  def fields
-    self.class::FIELDS
-  end
 
 end

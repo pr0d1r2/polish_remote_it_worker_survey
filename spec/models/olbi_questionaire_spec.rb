@@ -26,13 +26,16 @@ describe OlbiQuestionaire do
     its(:size) { should > 0 }
   end
 
-  its(:title) { should == OlbiQuestionaire::TITLE }
+  describe "class ancestors" do
+    subject { OlbiQuestionaire.ancestors }
 
-  its(:name) { should == OlbiQuestionaire::NAME }
+    it { should include Questionaire }
+  end
 
-  its(:description) { should == OlbiQuestionaire::DESCRIPTION }
+  describe "class" do
+    subject { OlbiQuestionaire }
 
-  its(:fields) { should == OlbiQuestionaire::FIELDS }
+    its(:table_name) { should =="olbi_questionaires" }
+  end
 
 end
-

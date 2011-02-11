@@ -1,6 +1,8 @@
 # coding: utf-8
 
-class PssQuestionaire < ActiveRecord::Base
+class PssQuestionaire < Questionaire
+
+  set_table_name "pss_questionaires"
 
   HOW_OFTEN = "Jak często w ostatnim miesiącu"
   FIELDS = [
@@ -28,24 +30,8 @@ class PssQuestionaire < ActiveRecord::Base
 
   DESCRIPTION = "Zawarte w tym kwestionariuszu pytania dotyczą twoich myśli i odczuć z ostatniego miesiąca. W przypadku każdego pytania wskaż, jak często odczuwałeś, czy myślałeś w określony sposób. Chociaż niektóre z pytań są do siebie podobne, to istnieją jednak różnice między nimi. Powinieneś zatem traktować każde z pytań jako niezależne. Udzielaj odpowiedzi szybko. To znaczy, nie usiłuj dokładnie przypomnieć sobie, ile razy odczuwałeś, czy myślałeś w określony sposób, lecz raczej wskaż odpowiedz, która wydaje się w przybliżeniu właściwa. Dla każdego z pytań masz do wyboru pięć możliwych sposobów odpowiedzi: Nigdy, Prawie nigdy, Czasami, Dość często. Bardzo często."
 
-  def title
-    self.class::TITLE
-  end
-
-  def name
-    self.class::NAME
-  end
-
   def author
     self.class::AUTHOR
-  end
-
-  def description
-    self.class::DESCRIPTION
-  end
-
-  def fields
-    self.class::FIELDS
   end
 
 end
