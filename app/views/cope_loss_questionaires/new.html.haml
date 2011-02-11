@@ -1,0 +1,23 @@
+- @title = @cope_loss_questionaire.title
+
+%h1= @cope_loss_questionaire.name
+
+%h2= @cope_loss_questionaire.author
+
+%h2= @cope_loss_questionaire.permission
+
+%h2= @cope_loss_questionaire.experimental
+
+%p= @cope_loss_questionaire.description
+
+= form_for @cope_loss_questionaire do |f|
+  %ol
+    - @cope_loss_questionaire.fields.each_with_index do |field, i|
+      %li
+        %div= field
+        - 1.upto(4) do |n|
+          %span= n
+          = f.radio_button("field_#{i+1}", n)
+
+  #next
+    = f.submit("Następny")
