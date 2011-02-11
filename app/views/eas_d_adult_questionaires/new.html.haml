@@ -1,0 +1,17 @@
+- @title = @eas_d_adult_questionaire.title
+
+%h1= @eas_d_adult_questionaire.name
+
+%p= @eas_d_adult_questionaire.description
+
+= form_for @eas_d_adult_questionaire do |f|
+  %ol
+    - @eas_d_adult_questionaire.fields.each_with_index do |field, i|
+      %li
+        %div= field
+        - 1.upto(5) do |n|
+          %span= n
+          = f.radio_button("field_#{i+1}", n)
+
+  #next
+    = f.submit("Następny")
