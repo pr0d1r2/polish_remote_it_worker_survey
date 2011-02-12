@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110211193559) do
+ActiveRecord::Schema.define(:version => 20110212042631) do
 
   create_table "cope_loss_questionaires", :force => true do |t|
     t.integer  "field_1",    :limit => 2, :default => 9, :null => false
@@ -121,6 +121,16 @@ ActiveRecord::Schema.define(:version => 20110211193559) do
     t.integer  "field_12",   :limit => 2, :default => 9, :null => false
     t.integer  "field_13",   :limit => 2, :default => 9, :null => false
     t.integer  "field_14",   :limit => 2, :default => 9, :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ssp_questionaires", :force => true do |t|
+    t.integer  "field_1",    :limit => 2, :default => 9, :null => false
+    t.integer  "field_2",    :limit => 2, :default => 9, :null => false
+    t.integer  "field_3",    :limit => 2, :default => 9, :null => false
+    t.integer  "field_4",    :limit => 2, :default => 9, :null => false
+    t.integer  "field_5",    :limit => 2, :default => 9, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
