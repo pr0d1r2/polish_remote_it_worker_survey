@@ -1,0 +1,17 @@
+- @title = @uwes_questionaire.title
+
+%h1= @uwes_questionaire.name
+
+%h2= @uwes_questionaire.author
+
+%p= @uwes_questionaire.description
+
+= form_for @uwes_questionaire do |f|
+  %ol
+    - @uwes_questionaire.fields.each_with_index do |field, i|
+      %li
+        %div= field
+        = f.select("field_#{i+1}", @uwes_questionaire.selection_options, {:include_blank => 'WYBIERZ ...'})
+
+  #next
+    = f.submit("Następny")

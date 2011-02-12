@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110212042631) do
+ActiveRecord::Schema.define(:version => 20110212061740) do
 
   create_table "cope_loss_questionaires", :force => true do |t|
     t.integer  "field_1",    :limit => 2, :default => 9, :null => false
@@ -131,6 +131,28 @@ ActiveRecord::Schema.define(:version => 20110212042631) do
     t.integer  "field_3",    :limit => 2, :default => 9, :null => false
     t.integer  "field_4",    :limit => 2, :default => 9, :null => false
     t.integer  "field_5",    :limit => 2, :default => 9, :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "uwes_questionaires", :force => true do |t|
+    t.integer  "field_1",    :limit => 2, :default => 9, :null => false
+    t.integer  "field_2",    :limit => 2, :default => 9, :null => false
+    t.integer  "field_3",    :limit => 2, :default => 9, :null => false
+    t.integer  "field_4",    :limit => 2, :default => 9, :null => false
+    t.integer  "field_5",    :limit => 2, :default => 9, :null => false
+    t.integer  "field_6",    :limit => 2, :default => 9, :null => false
+    t.integer  "field_7",    :limit => 2, :default => 9, :null => false
+    t.integer  "field_8",    :limit => 2, :default => 9, :null => false
+    t.integer  "field_9",    :limit => 2, :default => 9, :null => false
+    t.integer  "field_10",   :limit => 2, :default => 9, :null => false
+    t.integer  "field_11",   :limit => 2, :default => 9, :null => false
+    t.integer  "field_12",   :limit => 2, :default => 9, :null => false
+    t.integer  "field_13",   :limit => 2, :default => 9, :null => false
+    t.integer  "field_14",   :limit => 2, :default => 9, :null => false
+    t.integer  "field_15",   :limit => 2, :default => 9, :null => false
+    t.integer  "field_16",   :limit => 2, :default => 9, :null => false
+    t.integer  "field_17",   :limit => 2, :default => 9, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

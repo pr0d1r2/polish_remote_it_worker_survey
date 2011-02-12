@@ -58,3 +58,10 @@ Then /^I should see "([^"]*)" within "([^"]*)" point of list with dropdown selec
     page.should have_xpath( "//ol/li[#{number}]/div[contains(text(), \"#{text}\")]/../select/option[#{n} and @value='#{n}']")
   end
 end
+
+Then /^I should see "([^"]*)" within "([^"]*)" point of list with dropdown selection of "([^"]*)" options starting from "([^"]*)"$/ do |text, number, option_number, start_number|
+  start_number = start_number.to_i
+  start_number.upto(option_number.to_i-1+start_number) do |n|
+    page.should have_xpath( "//ol/li[#{number}]/div[contains(text(), \"#{text}\")]/../select/option[#{n-start_number+1} and @value='#{n}']")
+  end
+end
