@@ -49,10 +49,6 @@ Then /^I should see button "([^\"]*)"(?: within "([^\"]*)")?$/ do |text, selecto
   end
 end
 
-Then /^I should see "([^"]*)" within "([^"]*)" point of list$/ do |text, number|
-  page.should have_xpath( "//ol/li[#{number}][contains(text(), \"#{text}\")]")
-end
-
 Then /^I should see "([^"]*)" within "([^"]*)" point of list with dropdown selection of "([^"]*)" options$/ do |text, number, option_number|
   1.upto(option_number.to_i) do |n|
     page.should have_xpath( "//ol/li[#{number}]/div[contains(text(), \"#{text}\")]/../select/option[#{n} and @value='#{n}']")

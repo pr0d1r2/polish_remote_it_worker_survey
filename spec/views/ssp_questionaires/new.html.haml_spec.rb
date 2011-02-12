@@ -17,11 +17,6 @@ describe 'ssp_questionaires/new' do
 
     it { should have_tag('p') }
 
-
-    SspQuestionaire::SELECTIONS.each do |selection|
-      it { should have_tag('ol > li', selection) }
-    end
-
     SspQuestionaire::FIELDS.each do |field|
       it { should have_tag('form > ol > li > div', field) }
     end

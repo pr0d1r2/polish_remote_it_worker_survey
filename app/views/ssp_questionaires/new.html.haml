@@ -6,10 +6,6 @@
 
 %p= @ssp_questionaire.description
 
-%ol
-  - @ssp_questionaire.selections.each do |selection|
-    %li= selection
-
 = form_for @ssp_questionaire do |f|
   %ol
     - @ssp_questionaire.fields.each_with_index do |field, i|
