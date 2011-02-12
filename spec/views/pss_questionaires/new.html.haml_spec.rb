@@ -21,9 +21,7 @@ describe 'pss_questionaires/new' do
       it { should have_tag('form > ol > li > div', field) }
     end
 
-    it { should have_tag('form > ol > li > span', :count => PssQuestionaire::FIELDS.size*5) }
-
-    it { should have_tag('form > ol > li > input[type=radio]', :count => PssQuestionaire::FIELDS.size*5) }
+    it { should have_tag('form > ol > li > select > option', :count => PssQuestionaire::FIELDS.size*(PssQuestionaire::SELECTIONS.size+1)) }
 
     it { should have_tag('form > div#next > input[type=submit]') }
   end

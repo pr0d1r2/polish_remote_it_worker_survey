@@ -21,9 +21,7 @@ describe 'cope_loss_questionaires/new' do
       it { should have_tag('form > ol > li > div', field) }
     end
 
-    it { should have_tag('form > ol > li > span', :count => CopeLossQuestionaire::FIELDS.size*4) }
-
-    it { should have_tag('form > ol > li > input[type=radio]', :count => CopeLossQuestionaire::FIELDS.size*4) }
+    it { should have_tag('form > ol > li > select > option', :count => CopeLossQuestionaire::FIELDS.size*(CopeLossQuestionaire::SELECTIONS.size+1)) }
 
     it { should have_tag('form > div#next > input[type=submit]') }
   end

@@ -27,6 +27,17 @@ class OlbiQuestionaire < Questionaire
 
   NAME = "KWESTIONARIUSZ OLBI"
 
+  AUTHOR = " "
+
   DESCRIPTION = "Poniżej znajdują się stwierdzenia, z którymi ludzie się zgadzają lub nie zgadzają. Używając zaproponowanej skali odpowiedzi, proszę wskazać, w jakim stopniu Pani/Pan zgadza się z danym stwierdzeniem."
+
+  SELECTIONS = [
+    "Zgadzam się",
+    "Raczej zgadzam się",
+    "Raczej nie zgadzam się",
+    "Nie zgadzam się"
+  ]
+
+  SELECTION_STARTS = 1
 
 end

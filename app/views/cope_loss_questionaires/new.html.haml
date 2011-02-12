@@ -15,9 +15,7 @@
     - @cope_loss_questionaire.fields.each_with_index do |field, i|
       %li
         %div= field
-        - 1.upto(4) do |n|
-          %span= n
-          = f.radio_button("field_#{i+1}", n)
+        = f.select("field_#{i+1}", @cope_loss_questionaire.selection_options, {:include_blank => 'WYBIERZ ...'})
 
   #next
     = f.submit("Następny")

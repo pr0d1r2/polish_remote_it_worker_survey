@@ -30,18 +30,6 @@ class SspQuestionaire < Questionaire
    "zdecydowanie się zgadzam",
   ]
 
-  def author
-    self.class::AUTHOR
-  end
-
-  def selections
-    self.class::SELECTIONS
-  end
-
-  def selection_options
-    selections.collect.with_index do |selection, i|
-      [ (i+1).to_s + ". " + selection, i+1 ]
-    end
-  end
+  SELECTION_STARTS = 1
 
 end

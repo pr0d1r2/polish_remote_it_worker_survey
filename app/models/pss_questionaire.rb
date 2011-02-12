@@ -30,8 +30,14 @@ class PssQuestionaire < Questionaire
 
   DESCRIPTION = "Zawarte w tym kwestionariuszu pytania dotyczą twoich myśli i odczuć z ostatniego miesiąca. W przypadku każdego pytania wskaż, jak często odczuwałeś, czy myślałeś w określony sposób. Chociaż niektóre z pytań są do siebie podobne, to istnieją jednak różnice między nimi. Powinieneś zatem traktować każde z pytań jako niezależne. Udzielaj odpowiedzi szybko. To znaczy, nie usiłuj dokładnie przypomnieć sobie, ile razy odczuwałeś, czy myślałeś w określony sposób, lecz raczej wskaż odpowiedz, która wydaje się w przybliżeniu właściwa. Dla każdego z pytań masz do wyboru pięć możliwych sposobów odpowiedzi: Nigdy, Prawie nigdy, Czasami, Dość często. Bardzo często."
 
-  def author
-    self.class::AUTHOR
-  end
+  SELECTIONS = [
+    "Nigdy",
+    "Prawie nigdy",
+    "Czasami",
+    "Dość często",
+    "Bardzo często"
+  ]
+
+  SELECTION_STARTS = 0
 
 end

@@ -11,9 +11,7 @@
     - @pss_questionaire.fields.each_with_index do |field, i|
       %li
         %div= field
-        - 0.upto(4) do |n|
-          %span= n
-          = f.radio_button("field_#{i+1}", n)
+        = f.select("field_#{i+1}", @pss_questionaire.selection_options, {:include_blank => 'WYBIERZ ...'})
 
   #next
     = f.submit("Następny")

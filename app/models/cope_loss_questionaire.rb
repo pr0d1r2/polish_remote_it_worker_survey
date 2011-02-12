@@ -62,9 +62,14 @@ class CopeLossQuestionaire < Questionaire
 
   DESCRIPTION = "Ze stresem można poradzić sobie na wiele różnych sposobów, W tym kwestionariuszu prosimy o wskazanie tego, co Pan(i) czuł(a), jak postępował(a) doświadczając ostatnio stresującego wydarzenia związanego z pracą. Prosimy o ustosunkowanie się do 60-ciu niżej wymienionych stwierdzeń. Przy każdym z nich podano cztery cyfry (1,2,3,4), Prosimy o zakreślenie tej cyfry, której znaczenie najlepiej charakteryzuje Pana(i) reakcje. Nie ma tu odpowiedzi dobrych ani złych, dlatego prosimy o szczere odpowiedzi, bo tylko takie będą miały wartość. Proszę nie pominąć żadnej pozycji."
 
-  def author
-    self.class::AUTHOR
-  end
+  SELECTIONS = [
+    "Nigdy tak nie robiłem",
+    "Rzadko tak robiłem",
+    "Często tak robiłem",
+    "Prawie zawsze tak robiłem"
+  ]
+
+  SELECTION_STARTS = 1
 
   def permission
     self.class::PERMISSION

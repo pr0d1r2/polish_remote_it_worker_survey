@@ -31,6 +31,18 @@ class EasDAdultQuestionaire < Questionaire
 
   NAME = "Arnold H. Buss i Robert Plomin KWESTIONARIUSZ EAS-D WERSJA DLA DOROSŁYCH w polskiej adaptacji Włodzimierza Oniszezenki"
 
+  AUTHOR = " "
+
   DESCRIPTION = "Kwestionariusz ten zawiera stwierdzenia odnoszące się do różnych cech temperamentu. Prosimy przeczytać uważnie każde z nich i otoczyć kółkiem jedną z cyfr od I do 5, aby wskazać, w jakim stopniu dane stwierdzenie opisuje Pana/Panią, Nie ma tu odpowiedzi dobrych lub złych, bo każdy człowiek jest inny, Prosimy nie zastanawiać się długo nad każdym stwierdzeniem i udzielić szczerych odpowiedzi. Należy ustosunkować się do każdego stwierdzenia otaczając kółkiem jedną z pięciu cyfr zależnie od tego, w jakim stopniu dane stwierdzenie dotyczy Pana/Pani:"
+
+  SELECTIONS = [
+    "zdecydowanie nie",
+    "raczej nie",
+    "nie wiem",
+    "raczej tak",
+    "zdecydowanie tak"
+  ]
+
+  SELECTION_STARTS = 1
 
 end

@@ -42,18 +42,6 @@ class UwesQuestionaire < Questionaire
     "Zawsze (każdego dnia)",
   ]
 
-  def author
-    self.class::AUTHOR
-  end
-
-  def selections
-    self.class::SELECTIONS
-  end
-
-  def selection_options
-    selections.collect.with_index do |selection, i|
-      [ i.to_s + ". " + selection, i ]
-    end
-  end
+  SELECTION_STARTS = 0
 
 end

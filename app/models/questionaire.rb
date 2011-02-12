@@ -16,4 +16,22 @@ class Questionaire < ActiveRecord::Base
     self.class::FIELDS
   end
 
+  def author
+    self.class::AUTHOR
+  end
+
+  def selections
+    self.class::SELECTIONS
+  end
+
+  def selection_starts
+    self.class::SELECTION_STARTS
+  end
+
+  def selection_options
+    selections.collect.with_index do |selection, i|
+      [ (i+selection_starts).to_s + ". " + selection, i+selection_starts ]
+    end
+  end
+
 end

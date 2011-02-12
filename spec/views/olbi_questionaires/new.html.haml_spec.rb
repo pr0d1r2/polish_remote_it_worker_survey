@@ -19,9 +19,7 @@ describe 'olbi_questionaires/new' do
       it { should have_tag('form > ol > li > div', field) }
     end
 
-    it { should have_tag('form > ol > li > span', :count => OlbiQuestionaire::FIELDS.size*4) }
-
-    it { should have_tag('form > ol > li > input[type=radio]', :count => OlbiQuestionaire::FIELDS.size*4) }
+    it { should have_tag('form > ol > li > select > option', :count => OlbiQuestionaire::FIELDS.size*(OlbiQuestionaire::SELECTIONS.size+1)) }
 
     it { should have_tag('form > div#next > input[type=submit]') }
   end

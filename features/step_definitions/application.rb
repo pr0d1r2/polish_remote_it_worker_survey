@@ -35,14 +35,6 @@ Then /^I should see "([^"]*)" within new_pss_questionaire link$/ do |text|
   Then "I should see \"#{text}\" within \"a[@href='#{new_pss_questionaire_path}']\""
 end
 
-Then /^I should see "([^"]*)" within "([^"]*)" point of list with selection "([^"]*)"$/ do |text, number, range|
-  start = range.split("-").first.to_i
-  the_end = range.split("-").last.to_i
-  start.upto(the_end) do |n|
-    page.should have_xpath( "//ol/li[#{number}]/div[contains(text(), \"#{text}\")]/../input[@type='radio' and @value='#{n}']")
-  end
-end
-
 Then /^I should see button "([^\"]*)"(?: within "([^\"]*)")?$/ do |text, selector|
   with_scope(selector) do
     page.should have_button(text)
