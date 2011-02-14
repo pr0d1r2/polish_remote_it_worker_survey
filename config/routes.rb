@@ -5,7 +5,7 @@ PolishRemoteItWorkerSurvey::Application.routes.draw do
   resources :cope_loss_questionaires
   resources :ssp_questionaires
   resources :uwes_questionaires
-  match 'agreement', :to => 'agreement#index'
+  resource :agreement
   match 'welcome', :to => 'welcome#index'
   root :to => "welcome#index"
 end

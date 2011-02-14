@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'agreement/index' do
+describe 'agreements/show' do
 
   describe 'response' do
     subject do

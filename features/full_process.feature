@@ -1,13 +1,9 @@
 Feature: Full process
 
   Scenario: I enter the page and follow thru all questionaires to complete survey
-    pending
     When I go to the agreement page
-    Then I should be on "agreement" page
-
     And I follow "Kontynuuj"
 
-    Then I should be on "new_pss_questionaire" page
     And I select "1" from field "2"
     And I select "2" from field "3"
     And I select "3" from field "4"
@@ -38,22 +34,21 @@ Feature: Full process
       |13|2|
       |14|3|
 
-    Then I should be on "new_olbi_questionaire" page
-    And I select "1" from field "2"
+    When I select "1" from field "2"
     And I select "2" from field "3"
     And I select "3" from field "4"
     And I select "4" from field "5"
-    And I select "0" from field "6"
-    And I select "1" from field "7"
-    And I select "2" from field "8"
-    And I select "3" from field "9"
-    And I select "4" from field "10"
-    And I select "0" from field "11"
-    And I select "1" from field "12"
-    And I select "2" from field "13"
-    And I select "3" from field "14"
-    And I select "4" from field "15"
-    And I select "0" from field "16"
+    And I select "1" from field "6"
+    And I select "2" from field "7"
+    And I select "3" from field "8"
+    And I select "4" from field "9"
+    And I select "1" from field "10"
+    And I select "2" from field "11"
+    And I select "3" from field "12"
+    And I select "4" from field "13"
+    And I select "1" from field "14"
+    And I select "2" from field "15"
+    And I select "3" from field "16"
     And I press "Następny"
     Then I should have created new "olbi_questionaire" with following fields
       |1 |9|
@@ -61,20 +56,19 @@ Feature: Full process
       |3 |2|
       |4 |3|
       |5 |4|
-      |6 |0|
-      |7 |1|
-      |8 |2|
-      |9 |3|
-      |10|4|
-      |11|0|
-      |12|1|
-      |13|2|
-      |14|3|
-      |15|4|
-      |16|0|
+      |6 |1|
+      |7 |2|
+      |8 |3|
+      |9 |4|
+      |10|1|
+      |11|2|
+      |12|3|
+      |13|4|
+      |14|1|
+      |15|2|
+      |16|3|
 
-  Then I should be on "new_eas_d_adult_questionaire" page
-    And I select "1" from field "2"
+    When I select "1" from field "2"
     And I select "2" from field "3"
     And I select "3" from field "4"
     And I select "4" from field "5"
@@ -116,49 +110,48 @@ Feature: Full process
       |19|3|
       |20|4|
 
-  Then I should be on "new_cope_loss_questionaire" page
-    And I select "1" from field "2"
+    When I select "1" from field "2"
     And I select "2" from field "3"
     And I select "3" from field "4"
     And I select "4" from field "5"
-    And I select "5" from field "6"
-    And I select "1" from field "7"
-    And I select "2" from field "8"
-    And I select "3" from field "9"
-    And I select "4" from field "10"
-    And I select "5" from field "11"
-    And I select "1" from field "12"
-    And I select "2" from field "13"
-    And I select "3" from field "14"
-    And I select "4" from field "15"
-    And I select "5" from field "16"
-    And I select "1" from field "17"
-    And I select "2" from field "18"
-    And I select "3" from field "19"
-    And I select "4" from field "20"
-    And I select "1" from field "21"
-    And I select "2" from field "22"
-    And I select "3" from field "23"
-    And I select "4" from field "24"
-    And I select "1" from field "25"
-    And I select "2" from field "26"
-    And I select "3" from field "27"
-    And I select "4" from field "28"
-    And I select "1" from field "29"
-    And I select "2" from field "30"
-    And I select "3" from field "31"
-    And I select "4" from field "32"
-    And I select "1" from field "33"
-    And I select "2" from field "34"
-    And I select "3" from field "35"
-    And I select "4" from field "36"
-    And I select "1" from field "37"
-    And I select "2" from field "38"
-    And I select "3" from field "39"
-    And I select "4" from field "40"
-    And I select "1" from field "41"
-    And I select "2" from field "42"
-    And I select "3" from field "43"
+    And I select "1" from field "6"
+    And I select "2" from field "7"
+    And I select "3" from field "8"
+    And I select "4" from field "9"
+    And I select "1" from field "10"
+    And I select "2" from field "11"
+    And I select "3" from field "12"
+    And I select "4" from field "13"
+    And I select "1" from field "14"
+    And I select "2" from field "15"
+    And I select "3" from field "16"
+    And I select "4" from field "17"
+    And I select "1" from field "18"
+    And I select "2" from field "19"
+    And I select "3" from field "20"
+    And I select "4" from field "21"
+    And I select "1" from field "22"
+    And I select "2" from field "23"
+    And I select "3" from field "24"
+    And I select "4" from field "25"
+    And I select "1" from field "26"
+    And I select "2" from field "27"
+    And I select "3" from field "28"
+    And I select "4" from field "29"
+    And I select "1" from field "30"
+    And I select "2" from field "31"
+    And I select "3" from field "32"
+    And I select "4" from field "33"
+    And I select "1" from field "34"
+    And I select "2" from field "35"
+    And I select "3" from field "36"
+    And I select "4" from field "37"
+    And I select "1" from field "38"
+    And I select "2" from field "39"
+    And I select "3" from field "40"
+    And I select "4" from field "41"
+    And I select "1" from field "42"
+    And I select "2" from field "43"
     And I press "Następny"
     Then I should have created new "cope_loss_questionaire" with following fields
       |1 |9|
@@ -205,8 +198,7 @@ Feature: Full process
       |42|1|
       |43|2|
 
-    Then I should be on "new_ssp_questionaire" page
-    And I select "1" from field "2"
+    When I select "1" from field "2"
     And I select "2" from field "3"
     And I select "3" from field "4"
     And I select "4" from field "5"
@@ -218,8 +210,7 @@ Feature: Full process
       |4 |3|
       |5 |4|
 
-  Then I should be on "new_uwes_questionaire" page
-    And I select "1" from field "2"
+    When I select "1" from field "2"
     And I select "2" from field "3"
     And I select "3" from field "4"
     And I select "4" from field "5"

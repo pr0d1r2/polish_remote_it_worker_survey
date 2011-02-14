@@ -23,7 +23,7 @@ class SspQuestionaire < Questionaire
   SELECTIONS = [
    "zdecydowanie się nie zgadzam",
    "nie zgadzam się",
-   "raczej się nie zgadzam ",
+   "raczej się nie zgadzam",
    "trudno powiedzieć, czy się zgadzam, czy się nie zgadzam",
    "raczej się zgadzam",
    "zgadzam się",

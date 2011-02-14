@@ -1,5 +1,7 @@
 class Questionaire < ActiveRecord::Base
 
+  before_save :correct_empty_fields
+
   def title
     self.class::TITLE
   end
@@ -33,5 +35,13 @@ class Questionaire < ActiveRecord::Base
       [ (i+selection_starts).to_s + ". " + selection, i+selection_starts ]
     end
   end
+
+  private
+
+    def correct_empty_fields
+      1.upto(fields.size).each do |n|
+        self.send("field_#{n}=", 9) unless self.send("field_#{n}")
+      end
+    end
 
 end

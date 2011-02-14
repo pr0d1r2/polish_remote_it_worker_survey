@@ -53,3 +53,22 @@ Then /^I should see "([^"]*)" within "([^"]*)" point of list with dropdown selec
     page.should have_xpath( "//ol/li[#{number}]/div[contains(text(), \"#{text}\")]/../select/option[#{n-start_number+1} and @value='#{n}']")
   end
 end
+
+Then /^I select "([^"]*)" from field "([^"]*)"$/ do |value, field|
+  within(:xpath, "//ol/li[#{field}]/select") do
+    select(find(:xpath, "//ol/li[#{field}]/select/option[@value='#{value.to_i}']").text)
+  end
+end
+
+Then /^I should have created new "([^"]*)" with following fields$/ do |the_object, table|
+  the_model = the_object.camelize.constantize
+  last_record = the_model.last
+  table.raw.each do |row|
+    begin
+      value = last_record.send("field_#{row[0]}")
+      value.should == row[1].to_i
+    rescue RSpec::Expectations::ExpectationNotMetError
+      raise RSpec::Expectations::ExpectationNotMetError, "field not equal: #{row.inspect}, was #{value}, expected: #{row[1]}"
+    end
+  end
+end
