@@ -1,7 +1,10 @@
 Feature: Full process
 
   Scenario: I enter the page and follow thru all questionaires to complete survey
-    When I go to the agreement page
+    When I go to the welcome page
+    And I follow "Kontynuuj"
+
+    # agreement page
     And I follow "Kontynuuj"
 
     And I select "1" from field "2"
