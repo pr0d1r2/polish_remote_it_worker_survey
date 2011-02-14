@@ -1,6 +1,6 @@
 shared_examples_for "questionaire_controller" do
 
-  let(:the_questionaire) { mock }
+  let(:the_questionaire) { the_model.new }
   let(:the_object_name) { the_model.name.underscore.to_sym }
   let(:the_controller) { the_object_name.to_s.pluralize }
   let(:route_new) { "/#{the_controller}/new" }
@@ -25,6 +25,7 @@ shared_examples_for "questionaire_controller" do
     end
 
     describe "behavior" do
+      before { the_questionaire.identity = Identity.last }
       after { get :new }
 
       it "should create new the_model" do

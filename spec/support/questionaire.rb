@@ -1,5 +1,7 @@
 shared_examples_for "questionaire" do
 
+  should_belong_to :identity
+
   describe "FIELDS" do
     subject { the_class::FIELDS }
 

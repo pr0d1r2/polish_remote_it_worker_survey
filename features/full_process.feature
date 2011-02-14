@@ -248,3 +248,11 @@ Feature: Full process
       |15|2|
       |16|3|
       |17|4|
+
+    Then I should have "pss_questionaire" owned by last identity
+    Then I should have "olbi_questionaire" owned by last identity
+    Then I should have "eas_d_adult_questionaire" owned by last identity
+    Then I should have "cope_loss_questionaire" owned by last identity
+    Then I should have "ssp_questionaire" owned by last identity
+    Then I should have "uwes_questionaire" owned by last identity
+

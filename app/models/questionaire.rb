@@ -1,5 +1,7 @@
 class Questionaire < ActiveRecord::Base
 
+  belongs_to :identity
+
   before_save :correct_empty_fields
 
   def title

@@ -72,3 +72,7 @@ Then /^I should have created new "([^"]*)" with following fields$/ do |the_objec
     end
   end
 end
+
+Then /^I should have "([^"]*)" owned by last identity$/ do |the_object|
+  the_object.camelize.constantize.last.identity.should == Identity.last
+end

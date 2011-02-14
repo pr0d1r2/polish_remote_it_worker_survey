@@ -24,4 +24,5 @@ group :test do
   gem 'spork', '0.8.4'
   gem 'launchy', '0.3.7'
   gem 'rspec_tag_matchers', '1.0.0'
+  gem 'remarkable_activerecord', '4.0.0.alpha4'
 end

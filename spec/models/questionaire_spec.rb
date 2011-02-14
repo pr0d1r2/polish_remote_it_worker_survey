@@ -11,7 +11,7 @@ describe Questionaire do
         AUTHOR = "author"
         DESCRIPTION = "description"
         FIELDS = [ "Field1", "Field2" ],
-          SELECTIONS = [ "Option1", "Option2" ]
+        SELECTIONS = [ "Option1", "Option2" ]
         SELECTION_STARTS = 1
         attr_accessor :field_1
         attr_accessor :field_2
@@ -19,7 +19,7 @@ describe Questionaire do
     end
     ExampleQuestionaire
   end
-  let(:the_object) { the_class.new }
+  let(:the_object) { the_class.new(:identity => Identity.create) }
 
   context "when required constants set" do
     subject { the_object }
