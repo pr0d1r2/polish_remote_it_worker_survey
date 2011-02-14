@@ -1,7 +1,6 @@
-class UwesQuestionairesController < ApplicationController
+class UwesQuestionairesController < InheritedResources::Base
 
-  def new
-    @uwes_questionaire = UwesQuestionaire.new
-  end
+  respond_to :html
+  actions :new, :create
 
 end

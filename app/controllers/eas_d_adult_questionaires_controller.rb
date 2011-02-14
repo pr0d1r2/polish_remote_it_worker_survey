@@ -1,7 +1,6 @@
-class EasDAdultQuestionairesController < ApplicationController
+class EasDAdultQuestionairesController < InheritedResources::Base
 
-  def new
-    @eas_d_adult_questionaire = EasDAdultQuestionaire.new
-  end
+  respond_to :html
+  actions :new, :create
 
 end

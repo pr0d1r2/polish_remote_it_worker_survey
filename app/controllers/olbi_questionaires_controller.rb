@@ -1,7 +1,6 @@
-class OlbiQuestionairesController < ApplicationController
+class OlbiQuestionairesController < InheritedResources::Base
 
-  def new
-    @olbi_questionaire = OlbiQuestionaire.new
-  end
+  respond_to :html
+  actions :new, :create
 
 end

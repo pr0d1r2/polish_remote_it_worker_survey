@@ -1,7 +1,6 @@
-class CopeLossQuestionairesController < ApplicationController
+class CopeLossQuestionairesController < InheritedResources::Base
 
-  def new
-    @cope_loss_questionaire = CopeLossQuestionaire.new
-  end
+  respond_to :html
+  actions :new, :create
 
 end

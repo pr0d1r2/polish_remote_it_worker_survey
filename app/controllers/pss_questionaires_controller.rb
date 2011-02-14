@@ -1,7 +1,6 @@
-class PssQuestionairesController < ApplicationController
+class PssQuestionairesController < InheritedResources::Base
 
-  def new
-    @pss_questionaire = PssQuestionaire.new
-  end
+  respond_to :html
+  actions :new, :create
 
 end

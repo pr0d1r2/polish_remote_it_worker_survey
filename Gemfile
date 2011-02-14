@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.3'
 gem 'pg', '0.10.0'
 gem 'haml', '3.0.24'
+gem 'inherited_resources', '1.2.1'
 
 group :development do
   gem 'heroku', '1.14.6'

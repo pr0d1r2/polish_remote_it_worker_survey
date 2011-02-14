@@ -1,7 +1,6 @@
-class SspQuestionairesController < ApplicationController
+class SspQuestionairesController < InheritedResources::Base
 
-  def new
-    @ssp_questionaire = SspQuestionaire.new
-  end
+  respond_to :html
+  actions :new, :create
 
 end
