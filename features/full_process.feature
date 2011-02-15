@@ -268,6 +268,8 @@ Feature: Full process
       | workplace      | secret cave      |
       | hours_per_week | 10               |
 
+    # finish page
+    Then I should see "Dziękujemy" within header
 
     Then I should have "pss_questionaire" owned by last identity
     Then I should have "olbi_questionaire" owned by last identity
@@ -276,4 +278,3 @@ Feature: Full process
     Then I should have "ssp_questionaire" owned by last identity
     Then I should have "uwes_questionaire" owned by last identity
     Then I should have "demographic_questionaire" owned by last identity
-

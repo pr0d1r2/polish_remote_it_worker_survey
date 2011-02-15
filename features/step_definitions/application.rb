@@ -106,3 +106,7 @@ Then /^I should have created new "([^"]*)" with following values$/ do |the_objec
   end
 
 end
+
+Then /^I should see link "([^"]*)"$/ do |link|
+  Then "I should see \"#{link}\" within \"a[@href='#{link}']\""
+end

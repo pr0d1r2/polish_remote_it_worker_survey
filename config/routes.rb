@@ -7,6 +7,7 @@ PolishRemoteItWorkerSurvey::Application.routes.draw do
   resources :uwes_questionaires
   resources :demographic_questionaires
   resource :agreement
+  resource :finish
   match 'welcome', :to => 'welcome#index'
   root :to => "welcome#index"
 end
