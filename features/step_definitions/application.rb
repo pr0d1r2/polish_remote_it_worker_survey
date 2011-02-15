@@ -8,8 +8,8 @@ Then /^I should see "([^"]*)" within header$/ do |text|
   [ :h1, :h2 ].each do |header|
     next unless page.has_xpath?("//#{header}")
     header_found = true
+    text_found_in_header = page.has_xpath?("//#{header}[contains(text(), \"#{text}\")]")
     break if text_found_in_header
-    text_found_in_header = have_xpath("//#{header}[contains(text(), \"#{text}\"]")
   end
   raise "No headers" unless header_found
   raise "No text \"#{text}\" in any headers" unless text_found_in_header

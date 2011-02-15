@@ -5,7 +5,7 @@ Feature: Demographic questionaire
 
     Then I should see "ANKIETA DEMOGRAFICZNA" within header
 
-    Then I should see "Proszę o uzupełnienie informacji dotyczących Państwa osoby w podanych pustych miejscach lub zakreślenie kółkiem wybranej opcji." within header
+    Then I should see "Proszę o uzupełnienie informacji dotyczących Państwa osoby w podanych pustych miejscach lub zakreślenie kółkiem wybranej opcji." within paragraph
 
     Then I should see "WIEK" within "1" point of list with dropdown selection of "80" options starting from "10"
 
