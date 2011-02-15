@@ -108,7 +108,8 @@ ActiveRecord::Schema.define(:version => 20110215050329) do
   add_index "eas_d_adult_questionaires", ["identity_id"], :name => "index_eas_d_adult_questionaires_on_identity_id", :unique => true
 
   create_table "identities", :force => true do |t|
-    t.string   "token",      :limit => 32, :null => false
+    t.string   "token",      :limit => 32,                    :null => false
+    t.boolean  "finished",                 :default => false, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

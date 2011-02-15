@@ -116,6 +116,41 @@ describe Identity do
     end
   end
 
+  describe ".find_with_valid_token" do
+    let(:token) { mock }
+    after { Identity.find_with_valid_token(token) }
+
+    it "should search for not finished token not older than one week" do
+      Identity.should_receive(:find).with(
+        :first,
+        :conditions => ["token = ? AND finished = ? AND created_at > ?", token, false, 1.week.ago.at_beginning_of_day]
+      )
+    end
+  end
+
+  describe ".token_finish!" do
+    let(:token) { mock }
+    let(:identity) { mock(:try => nil) }
+    before { Identity.stub!(:find_with_valid_token => identity) }
+    after { Identity.token_finish!(token) }
+
+    it "should find identity with valid token" do
+      Identity.should_receive(:find_with_valid_token).with(token).and_return(identity)
+    end
+
+    it "should try call #finish! on identity" do
+      identity.should_receive(:try).with(:token_finish!)
+    end
+  end
+
+  describe "#token_finish!" do
+    after { the_object.token_finish! }
+
+    it "should update attribute finished" do
+      the_object.should_receive(:update_attribute).with(:finished, true)
+    end
+  end
+
   describe "#generate_token" do
     let(:generated_token) { "c"*32 }
     before { ActiveSupport::SecureRandom.stub!(:urlsafe_base64 => generated_token) }

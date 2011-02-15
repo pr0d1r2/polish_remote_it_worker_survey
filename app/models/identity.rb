@@ -23,7 +23,18 @@ class Identity < ActiveRecord::Base
   end
 
   def self.find_with_valid_token(token)
-    find(:first, :conditions => ["token = ? AND created_at > ?", token, 1.week.ago])
+    find(
+      :first,
+      :conditions => [ "token = ? AND finished = ? AND created_at > ?", token, false, 1.week.ago.at_beginning_of_day
+    ])
+  end
+
+  def self.token_finish!(token)
+    find_with_valid_token(token).try(:token_finish!)
+  end
+
+  def token_finish!
+    update_attribute(:finished, true)
   end
 
   private

@@ -7,7 +7,13 @@ class DemographicQuestionairesController < InheritedResources::Base
 
   def create
     create! do |success, failure|
-      success.html { redirect_to finish_path }
+      success.html do
+        Identity.token_finish!(session_identity_token)
+        cookies[:polish_remote_it_worker_survey_identity_token] = nil
+        session[:identity_token] = nil
+        params[:identity_token] = nil
+        redirect_to finish_path
+      end
     end
   end
 
