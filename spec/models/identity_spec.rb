@@ -11,6 +11,7 @@ describe Identity do
   should_have_many :pss_questionaires
   should_have_many :ssp_questionaires
   should_have_many :uwes_questionaires
+  should_have_many :demographic_questionaires
 
   context "before create" do
     after do

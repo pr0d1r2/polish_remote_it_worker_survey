@@ -249,10 +249,31 @@ Feature: Full process
       |16|3|
       |17|4|
 
+    When I select "10" from "demographic_questionaire_age"
+    And I select "kobieta" from "demographic_questionaire_male"
+    And I select "wolny" from "demographic_questionaire_married"
+    And I select "0" from "demographic_questionaire_children_count"
+    And I fill in "demographic_questionaire_function" with "masta of disasta"
+    And I select "10" from "demographic_questionaire_years_working"
+    And I fill in "demographic_questionaire_workplace" with "secret cave"
+    And I select "10" from "demographic_questionaire_hours_per_week"
+    And I press "Zakończ ankietę"
+    Then I should have created new "demographic_questionaire" with following values
+      | age            | 10               |
+      | male           | false            |
+      | married        | false            |
+      | children_count | 0                |
+      | function       | masta of disasta |
+      | years_working  | 10               |
+      | workplace      | secret cave      |
+      | hours_per_week | 10               |
+
+
     Then I should have "pss_questionaire" owned by last identity
     Then I should have "olbi_questionaire" owned by last identity
     Then I should have "eas_d_adult_questionaire" owned by last identity
     Then I should have "cope_loss_questionaire" owned by last identity
     Then I should have "ssp_questionaire" owned by last identity
     Then I should have "uwes_questionaire" owned by last identity
+    Then I should have "demographic_questionaire" owned by last identity
 

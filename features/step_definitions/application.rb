@@ -16,7 +16,10 @@ Then /^I should see "([^"]*)" within header$/ do |text|
 end
 
 Then /^I should see "([^"]*)" within paragraph$/ do |text|
-  Then "I should see \"#{text}\" within \"p\""
+end
+
+Then /^I should see "([^"]*)" within paragraph in numbered list$/ do |text|
+  Then "I should see \"#{text}\" within \"ol > li > p\""
 end
 
 Then /^I should see "([^"]*)" within agreement link$/ do |text|
@@ -75,4 +78,31 @@ end
 
 Then /^I should have "([^"]*)" owned by last identity$/ do |the_object|
   the_object.camelize.constantize.last.identity.should == Identity.last
+end
+
+Then /^I should see "([^"]*)" within "([^"]*)" point of list$/ do |text, number|
+  page.should have_xpath( "//ol/li[#{number}]/div[contains(text(), \"#{text}\")]" )
+end
+
+Then /^I should see "([^"]*)" within "([^"]*)" point of list with text field$/ do |text, number|
+  page.should have_xpath( "//ol/li[#{number}]/div[contains(text(), \"#{text}\")]/../input[@type='text']")
+end
+
+Then /^I should see "([^"]*)" within "([^"]*)" point of list with dropdown boolean selection$/ do |text, number|
+  page.should have_xpath( "//ol/li[#{number}]/div[contains(text(), \"#{text}\")]/../select/option[@value='true']")
+  page.should have_xpath( "//ol/li[#{number}]/div[contains(text(), \"#{text}\")]/../select/option[@value='false']")
+end
+
+Then /^I should have created new "([^"]*)" with following values$/ do |the_object, table|
+  the_model = the_object.camelize.constantize
+  last_record = the_model.last
+  table.raw.each do |row|
+    begin
+      value = last_record.send(row[0]).to_s
+      value.should == row[1].to_s
+    rescue RSpec::Expectations::ExpectationNotMetError
+      raise RSpec::Expectations::ExpectationNotMetError, "field not equal: #{row.inspect}, was #{value}, expected: #{row[1]}"
+    end
+  end
+
 end

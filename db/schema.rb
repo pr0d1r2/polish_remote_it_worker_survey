@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110214092638) do
+ActiveRecord::Schema.define(:version => 20110215050329) do
 
   create_table "cope_loss_questionaires", :force => true do |t|
     t.integer  "field_1",     :limit => 2, :default => 9, :null => false
@@ -62,6 +62,22 @@ ActiveRecord::Schema.define(:version => 20110214092638) do
   end
 
   add_index "cope_loss_questionaires", ["identity_id"], :name => "index_cope_loss_questionaires_on_identity_id", :unique => true
+
+  create_table "demographic_questionaires", :force => true do |t|
+    t.integer  "identity_id",    :null => false
+    t.integer  "age"
+    t.boolean  "male"
+    t.boolean  "married"
+    t.integer  "children_count"
+    t.string   "function"
+    t.integer  "years_working"
+    t.string   "workplace"
+    t.integer  "hours_per_week"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "demographic_questionaires", ["identity_id"], :name => "index_demographic_questionaires_on_identity_id", :unique => true
 
   create_table "eas_d_adult_questionaires", :force => true do |t|
     t.integer  "field_1",     :limit => 2, :default => 9, :null => false

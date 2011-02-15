@@ -1,0 +1,37 @@
+- @title = @demographic_questionaire.title
+
+%h1= @demographic_questionaire.name
+
+%p= @demographic_questionaire.description
+
+= form_for @demographic_questionaire do |f|
+  %ol
+    %li
+      #age= @demographic_questionaire.age_label
+      = f.select(:age, @demographic_questionaire.age_options, {:include_blank => 'WYBIERZ ...'}) + "lata"
+    %li
+      #male= @demographic_questionaire.male_label
+      = f.select(:male, @demographic_questionaire.male_options, {:include_blank => 'WYBIERZ ...'})
+    %li
+      #married= @demographic_questionaire.married_label
+      = f.select(:married, @demographic_questionaire.married_options, {:include_blank => 'WYBIERZ ...'})
+    %li
+      #children_count= @demographic_questionaire.children_count_label
+      = f.select(:children_count, @demographic_questionaire.children_count_options, {:include_blank => 'WYBIERZ ...'})
+    %li
+      #function= @demographic_questionaire.function_label
+      = f.text_field(:function)
+    %li
+      #years_working= @demographic_questionaire.years_working_label
+      = f.select(:years_working, @demographic_questionaire.years_working_options, {:include_blank => 'WYBIERZ ...'})
+    %li
+      #workplace= @demographic_questionaire.workplace_label
+      = f.text_field(:workplace)
+      %p= "biuro | dom | biuro/dom | inne"
+    %li
+      #hours_per_week= @demographic_questionaire.hours_per_week_label
+      = f.select(:hours_per_week, @demographic_questionaire.hours_per_week_options, {:include_blank => 'WYBIERZ ...'})
+
+  #next
+    = f.submit("Zakończ ankietę")
+

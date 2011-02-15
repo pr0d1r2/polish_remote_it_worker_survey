@@ -10,6 +10,7 @@ class Identity < ActiveRecord::Base
   has_many :pss_questionaires
   has_many :ssp_questionaires
   has_many :uwes_questionaires
+  has_many :demographic_questionaires
 
   before_create :generate_token
 
