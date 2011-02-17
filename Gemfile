@@ -7,6 +7,7 @@ gem 'inherited_resources', '1.2.1'
 
 group :development do
   gem 'heroku', '1.14.6'
+  gem 'taps', '0.3.15'
   gem 'wirble'
   gem 'hirb'
   gem 'awesome_print'
