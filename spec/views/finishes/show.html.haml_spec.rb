@@ -13,7 +13,7 @@ describe 'finishes/show' do
 
     it { should have_tag('p') }
 
-    it { should have_tag('p > a') }
+    it { should have_tag('p > a', :count => 2) }
   end
 
 end

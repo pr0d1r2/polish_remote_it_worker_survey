@@ -9,3 +9,5 @@ Feature: Finish
     And I should see "Możesz znaleźć kod źródłowy tej ankiety na:" within paragraph
 
     And I should see link "http://github.com/pr0d1r2/polish_remote_it_worker_survey"
+
+    And I should see link "Wypełnij jeszcze raz" to start page

@@ -110,3 +110,7 @@ end
 Then /^I should see link "([^"]*)"$/ do |link|
   Then "I should see \"#{link}\" within \"a[@href='#{link}']\""
 end
+
+Then /^I should see link "([^"]*)" to start page$/ do |text|
+  Then "I should see \"#{text}\" within \"a[@href='#{welcome_path}']\""
+end
