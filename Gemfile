@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.3'
+gem 'rails', '3.0.6'
 gem 'pg', '0.10.0'
 gem 'haml', '3.0.24'
 gem 'inherited_resources', '1.2.1'
