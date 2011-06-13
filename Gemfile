@@ -1,8 +1,8 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.7'
+gem 'rails', '3.0.8'
 gem 'pg', '0.10.0'
-gem 'haml', '3.0.24'
+gem 'haml', '3.1.2'
 gem 'inherited_resources', '1.2.1'
 
 group :development do
@@ -14,8 +14,8 @@ group :development do
 end
 
 group :test do
-  gem 'rspec', '2.4.0'
-  gem 'rspec-rails', '2.4.1'
+  gem 'rspec', '2.6.0'
+  gem 'rspec-rails', '2.6.1'
   gem 'capybara', '0.4.0'
   gem 'database_cleaner', '0.6.0'
   gem 'cucumber-rails', '0.3.2'
