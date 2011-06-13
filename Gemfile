@@ -19,7 +19,7 @@ group :test do
   gem 'capybara', '0.4.0'
   gem 'database_cleaner', '0.6.0'
   gem 'cucumber-rails', '0.3.2'
-  gem 'cucumber', '0.9.4'
+  gem 'cucumber', '0.10.6'
   gem 'autotest', '4.4.6'
   gem 'autotest-notification', '2.3.1'
   gem 'spork', '0.8.4'
