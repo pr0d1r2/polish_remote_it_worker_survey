@@ -37,3 +37,5 @@ bundle install
 rails generate rspec:install
 rails generate cucumber:install --rspec --cabybara
 AUTOFEATURE=true autotest
+
+Add testing on Travis CI.
