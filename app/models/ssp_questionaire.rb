@@ -12,7 +12,7 @@ class SspQuestionaire < Questionaire
     "Gdybym miał decydować raz jeszcze, wybrałbym tę samą prace",
   ]
 
-  POSITIVE_FIELDS = []
+  POSITIVE_FIELDS = [1, 2, 3, 4, 5]
   NEGATIVE_FIELDS = []
 
   EXACT_POSITIVE_FIELDS = []
