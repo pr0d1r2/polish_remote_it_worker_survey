@@ -21,7 +21,7 @@ describe CopeLossQuestionaire do
   describe "NEGATIVE_FIELDS" do
     it "should not have fields included in POSITIVE_FIELDS" do
       the_class::NEGATIVE_FIELDS.each do |n|
-        raise "Positive field '#{n}' included in POSITIVE_FIELDS" if the_class::POSITIVE_FIELDS.include?(n)
+        raise "Negative field '#{n}' included in POSITIVE_FIELDS" if the_class::POSITIVE_FIELDS.include?(n)
       end
     end
   end
