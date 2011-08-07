@@ -27,8 +27,8 @@ class EasDAdultQuestionaire < Questionaire
     "Uważam, że ludzie są bardziej zajmujący niż cokolwiek innego",
   ]
 
-  POSITIVE_FIELDS = []
-  NEGATIVE_FIELDS = []
+  POSITIVE_FIELDS = [1, 7, 15, 17, 18, 19, 20]
+  NEGATIVE_FIELDS = [2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 16]
 
   EXACT_POSITIVE_FIELDS = []
   EXACT_NEGATIVE_FIELDS = []
