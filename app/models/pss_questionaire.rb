@@ -22,8 +22,8 @@ class PssQuestionaire < Questionaire
     "#{HOW_OFTEN} czułeś, że trudności tak się spiętrzyły, że nie zdołasz im podołać?"
   ]
 
-  POSITIVE_FIELDS = []
-  NEGATIVE_FIELDS = []
+  POSITIVE_FIELDS = [2, 4, 5, 6, 7, 9, 10, 13]
+  NEGATIVE_FIELDS = [1, 3, 8, 11, 12, 14]
 
   EXACT_POSITIVE_FIELDS = []
   EXACT_NEGATIVE_FIELDS = []
