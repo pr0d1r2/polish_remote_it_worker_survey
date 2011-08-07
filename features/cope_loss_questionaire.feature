@@ -12,7 +12,7 @@ Feature: Cope Loss Questionaire
 
     And I should see "(Za zgodą autorów polska adaptacja przygotowana przez S. Piątek i K. Wrześniewskiego)" within header
 
-    And I should see "Ze stresem można poradzić sobie na wiele różnych sposobów, W tym kwestionariuszu prosimy o wskazanie tego, co Pan(i) czuł(a), jak postępował(a) doświadczając ostatnio stresującego wydarzenia związanego z pracą. Prosimy o ustosunkowanie się do 60-ciu niżej wymienionych stwierdzeń. Przy każdym z nich podano cztery cyfry (1,2,3,4), Prosimy o zakreślenie tej cyfry, której znaczenie najlepiej charakteryzuje Pana(i) reakcje. Nie ma tu odpowiedzi dobrych ani złych, dlatego prosimy o szczere odpowiedzi, bo tylko takie będą miały wartość. Proszę nie pominąć żadnej pozycji." within paragraph
+    And I should see "Ze stresem można poradzić sobie na wiele różnych sposobów, W tym kwestionariuszu prosimy o wskazanie tego, co Pan(i) czuł(a), jak postępował(a) doświadczając ostatnio stresującego wydarzenia związanego z pracą. Prosimy o ustosunkowanie się do 43-ech niżej wymienionych stwierdzeń. Przy każdym z nich podano cztery cyfry (1,2,3,4), Prosimy o zakreślenie tej cyfry, której znaczenie najlepiej charakteryzuje Pana(i) reakcje. Nie ma tu odpowiedzi dobrych ani złych, dlatego prosimy o szczere odpowiedzi, bo tylko takie będą miały wartość. Proszę nie pominąć żadnej pozycji." within paragraph
 
     And I should see "Rozwijalem(am) się jako człowiek dzięki doświadczeniom życiowym." within "1" point of list with dropdown selection of "4" options
     And I should see "Koncentrowałem(am) się na pracy i innych czynnościach, aby nie myśleć o trudnościach" within "2" point of list with dropdown selection of "4" options
