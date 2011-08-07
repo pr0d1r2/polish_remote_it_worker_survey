@@ -24,6 +24,15 @@ class UwesQuestionaire < Questionaire
     "Pracuję wytrwale, nawet jeśli sprawy nie idą dobrze.",
   ]
 
+  POSITIVE_FIELDS = []
+  NEGATIVE_FIELDS = []
+
+  EXACT_POSITIVE_FIELDS = []
+  EXACT_NEGATIVE_FIELDS = []
+
+  SIMILAR_POSITIVE_FIELDS = []
+  SIMILAR_NEGATIVE_FIELDS = []
+
   TITLE = "Ankieta dla polskich pracowników zdalnych z branży IT - Kwestionariusz UWES"
 
   NAME = "Praca i samopoczucie (Kwestionariusz UWES)"

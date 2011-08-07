@@ -12,6 +12,15 @@ class SspQuestionaire < Questionaire
     "Gdybym miał decydować raz jeszcze, wybrałbym tę samą prace",
   ]
 
+  POSITIVE_FIELDS = []
+  NEGATIVE_FIELDS = []
+
+  EXACT_POSITIVE_FIELDS = []
+  EXACT_NEGATIVE_FIELDS = []
+
+  SIMILAR_POSITIVE_FIELDS = []
+  SIMILAR_NEGATIVE_FIELDS = []
+
   TITLE = "Ankieta dla polskich pracowników zdalnych z branży IT - Kwestionariusz SSP"
 
   NAME = "SKALA SATYSFAKCJI Z PRACY (SSP)"

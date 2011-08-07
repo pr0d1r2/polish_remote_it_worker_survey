@@ -23,6 +23,15 @@ class OlbiQuestionaire < Questionaire
     "Kiedy pracuję, zazwyczaj czuję się pełny(a) energii",
   ]
 
+  POSITIVE_FIELDS = []
+  NEGATIVE_FIELDS = []
+
+  EXACT_POSITIVE_FIELDS = []
+  EXACT_NEGATIVE_FIELDS = []
+
+  SIMILAR_POSITIVE_FIELDS = []
+  SIMILAR_NEGATIVE_FIELDS = []
+
   TITLE = "Ankieta dla polskich pracowników zdalnych z branży IT - Kwestionariusz OLBI"
 
   NAME = "KWESTIONARIUSZ OLBI"

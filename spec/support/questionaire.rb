@@ -56,4 +56,76 @@ shared_examples_for "questionaire" do
     its(:table_name) { should == table_name }
   end
 
+  describe "POSITIVE_FIELDS" do
+    it "should not have fields included in NEGATIVE_FIELDS" do
+      the_class::POSITIVE_FIELDS.each do |p|
+        raise "Positive field '#{p}' included in NEGATIVE_FIELDS" if the_class::NEGATIVE_FIELDS.include?(p)
+      end
+    end
+  end
+
+  describe "NEGATIVE_FIELDS" do
+    it "should not have fields included in POSITIVE_FIELDS" do
+      the_class::NEGATIVE_FIELDS.each do |n|
+        raise "Negative field '#{n}' included in POSITIVE_FIELDS" if the_class::POSITIVE_FIELDS.include?(n)
+      end
+    end
+  end
+
+  describe "EXACT_POSITIVE_FIELDS" do
+    it "should be always in POSITIVE_FIELDS" do
+      the_class::EXACT_POSITIVE_FIELDS.flatten.each do |n|
+        raise "Exact positive field '#{n}' not included in POSITIVE_FIELDS" unless the_class::POSITIVE_FIELDS.include?(n)
+      end
+    end
+
+    it "should not be in NEGATIVE_FIELDS" do
+      the_class::EXACT_POSITIVE_FIELDS.flatten.each do |n|
+        raise "Exact positive field '#{n}' included in NEGATIVE_FIELDS" if the_class::NEGATIVE_FIELDS.include?(n)
+      end
+    end
+  end
+
+  describe "EXACT_NEGATIVE_FIELDS" do
+    it "should be always in NEGATIVE_FIELDS" do
+      the_class::EXACT_NEGATIVE_FIELDS.flatten.each do |n|
+        raise "Exact negative field '#{n}' not included in NEGATIVE_FIELDS" unless the_class::NEGATIVE_FIELDS.include?(n)
+      end
+    end
+
+    it "should not be in POSITIVE_FIELDS" do
+      the_class::EXACT_NEGATIVE_FIELDS.flatten.each do |n|
+        raise "Exact negative field '#{n}' included in POSITIVE_FIELDS" if the_class::POSITIVE_FIELDS.include?(n)
+      end
+    end
+  end
+
+  describe "SIMILAR_POSITIVE_FIELDS" do
+    it "should be always in POSITIVE_FIELDS" do
+      the_class::SIMILAR_POSITIVE_FIELDS.flatten.each do |n|
+        raise "Similar positive field '#{n}' not included in POSITIVE_FIELDS" unless the_class::POSITIVE_FIELDS.include?(n)
+      end
+    end
+
+    it "should not be in NEGATIVE_FIELDS" do
+      the_class::SIMILAR_POSITIVE_FIELDS.flatten.each do |n|
+        raise "Similar positive field '#{n}' included in NEGATIVE_FIELDS" if the_class::NEGATIVE_FIELDS.include?(n)
+      end
+    end
+  end
+
+  describe "SIMILAR_NEGATIVE_FIELDS" do
+    it "should be always in NEGATIVE_FIELDS" do
+      the_class::SIMILAR_NEGATIVE_FIELDS.flatten.each do |n|
+        raise "Similar negative field '#{n}' not included in NEGATIVE_FIELDS" unless the_class::NEGATIVE_FIELDS.include?(n)
+      end
+    end
+
+    it "should not be in POSITIVE_FIELDS" do
+      the_class::SIMILAR_NEGATIVE_FIELDS.flatten.each do |n|
+        raise "Similar negative field '#{n}' included in POSITIVE_FIELDS" if the_class::POSITIVE_FIELDS.include?(n)
+      end
+    end
+  end
+
 end

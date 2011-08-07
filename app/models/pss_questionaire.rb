@@ -22,6 +22,15 @@ class PssQuestionaire < Questionaire
     "#{HOW_OFTEN} czułeś, że trudności tak się spiętrzyły, że nie zdołasz im podołać?"
   ]
 
+  POSITIVE_FIELDS = []
+  NEGATIVE_FIELDS = []
+
+  EXACT_POSITIVE_FIELDS = []
+  EXACT_NEGATIVE_FIELDS = []
+
+  SIMILAR_POSITIVE_FIELDS = []
+  SIMILAR_NEGATIVE_FIELDS = []
+
   TITLE = "Ankieta dla polskich pracowników zdalnych z branży IT - Kwestionariusz PSS"
 
   NAME = "KWESTIONARIUSZ PSS"

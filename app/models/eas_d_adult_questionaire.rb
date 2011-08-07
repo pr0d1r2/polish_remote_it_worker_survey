@@ -27,6 +27,15 @@ class EasDAdultQuestionaire < Questionaire
     "Uważam, że ludzie są bardziej zajmujący niż cokolwiek innego",
   ]
 
+  POSITIVE_FIELDS = []
+  NEGATIVE_FIELDS = []
+
+  EXACT_POSITIVE_FIELDS = []
+  EXACT_NEGATIVE_FIELDS = []
+
+  SIMILAR_POSITIVE_FIELDS = []
+  SIMILAR_NEGATIVE_FIELDS = []
+
   TITLE = "Ankieta dla polskich pracowników zdalnych z branży IT - Kwestionariusz EAS-D WERSJA DLA DOROSŁYCH"
 
   NAME = "Arnold H. Buss i Robert Plomin KWESTIONARIUSZ EAS-D WERSJA DLA DOROSŁYCH w polskiej adaptacji Włodzimierza Oniszezenki"
