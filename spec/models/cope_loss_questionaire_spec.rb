@@ -34,6 +34,14 @@ describe CopeLossQuestionaire do
     end
   end
 
+  describe "SIMILAR_POSITIVE_FIELDS" do
+    it "should be always in POSITIVE_FIELDS" do
+      the_class::SIMILAR_POSITIVE_FIELDS.flatten.each do |n|
+        raise "Similar positive field '#{n}' included in NEGATIVE_FIELDS" if the_class::NEGATIVE_FIELDS.include?(n)
+      end
+    end
+  end
+
   describe "SIMILAR_NEGATIVE_FIELDS" do
     it "should be always in NEGATIVE_FIELDS" do
       the_class::SIMILAR_NEGATIVE_FIELDS.flatten.each do |n|

@@ -59,6 +59,9 @@ class CopeLossQuestionaire < Questionaire
     [12, 26, 35]
   ]
 
+  SIMILAR_POSITIVE_FIELDS = [
+    [19, 32]
+  ]
   SIMILAR_NEGATIVE_FIELDS = [
     [2, 43]
   ]
