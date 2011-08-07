@@ -50,6 +50,9 @@ class CopeLossQuestionaire < Questionaire
     "Chodziłem(am) do kina lub oglądałem(am) TV żeby mniej o tym myśleć",
   ]
 
+  POSITIVE_FIELDS = [1, 4, 5, 10, 11, 13, 14, 15, 17, 19, 21, 22, 23, 25, 29, 30, 32, 33, 38, 39, 41, 42]
+  NEGATIVE_FIELDS = [2, 3, 6, 7, 8, 9, 12, 16, 18, 20, 24, 26, 27, 28, 31, 34, 35, 36, 37, 40, 43]
+
   TITLE = "Ankieta dla polskich pracowników zdalnych z branży IT - Kwestionariusz Cope - Strat"
 
   NAME = "KWESTIONARIUSZ COPE - STRAT"

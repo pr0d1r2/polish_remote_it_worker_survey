@@ -10,6 +10,22 @@ describe CopeLossQuestionaire do
 
   it_should_behave_like "questionaire"
 
+  describe "POSITIVE_FIELDS" do
+    it "should not have fields included in NEGATIVE_FIELDS" do
+      the_class::POSITIVE_FIELDS.each do |p|
+        raise "Positive field '#{p}' included in NEGATIVE_FIELDS" if the_class::NEGATIVE_FIELDS.include?(p)
+      end
+    end
+  end
+
+  describe "NEGATIVE_FIELDS" do
+    it "should not have fields included in POSITIVE_FIELDS" do
+      the_class::NEGATIVE_FIELDS.each do |n|
+        raise "Positive field '#{n}' included in POSITIVE_FIELDS" if the_class::POSITIVE_FIELDS.include?(n)
+      end
+    end
+  end
+
   describe "PERMISSION" do
     subject { the_class::PERMISSION }
 
