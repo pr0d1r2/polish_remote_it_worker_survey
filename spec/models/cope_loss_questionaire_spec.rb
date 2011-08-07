@@ -26,6 +26,20 @@ describe CopeLossQuestionaire do
     end
   end
 
+  describe "EXACT_POSITIVE_FIELDS" do
+    it "should be always in POSITIVE_FIELDS" do
+      the_class::EXACT_POSITIVE_FIELDS.flatten.each do |n|
+        raise "Exact positive field '#{n}' not included in POSITIVE_FIELDS" unless the_class::POSITIVE_FIELDS.include?(n)
+      end
+    end
+
+    it "should not be in NEGATIVE_FIELDS" do
+      the_class::EXACT_POSITIVE_FIELDS.flatten.each do |n|
+        raise "Exact positive field '#{n}' included in NEGATIVE_FIELDS" if the_class::NEGATIVE_FIELDS.include?(n)
+      end
+    end
+  end
+
   describe "EXACT_NEGATIVE_FIELDS" do
     it "should be always in NEGATIVE_FIELDS" do
       the_class::EXACT_NEGATIVE_FIELDS.flatten.each do |n|

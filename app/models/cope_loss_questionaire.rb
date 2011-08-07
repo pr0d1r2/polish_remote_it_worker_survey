@@ -53,6 +53,9 @@ class CopeLossQuestionaire < Questionaire
   POSITIVE_FIELDS = [1, 4, 5, 10, 11, 13, 14, 15, 17, 19, 21, 22, 23, 25, 29, 30, 32, 33, 38, 39, 41, 42]
   NEGATIVE_FIELDS = [2, 3, 6, 7, 8, 9, 12, 16, 18, 20, 24, 26, 27, 28, 31, 34, 35, 36, 37, 40, 43]
 
+  EXACT_POSITIVE_FIELDS = [
+    [15, 33]
+  ]
   EXACT_NEGATIVE_FIELDS = [
     [7, 18],
     [8, 20, 35],
