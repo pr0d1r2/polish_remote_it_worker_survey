@@ -1,0 +1,2 @@
+before_script:
+  - "psql -c 'create database polish_remote_it_worker_survey_test;' -U postgres >/dev/null"
