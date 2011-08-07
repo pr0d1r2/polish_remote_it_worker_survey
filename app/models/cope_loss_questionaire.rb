@@ -59,6 +59,10 @@ class CopeLossQuestionaire < Questionaire
     [12, 26, 35]
   ]
 
+  SIMILAR_NEGATIVE_FIELDS = [
+    [2, 43]
+  ]
+
   TITLE = "Ankieta dla polskich pracowników zdalnych z branży IT - Kwestionariusz Cope - Strat"
 
   NAME = "KWESTIONARIUSZ COPE - STRAT"
