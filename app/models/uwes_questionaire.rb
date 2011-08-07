@@ -24,7 +24,7 @@ class UwesQuestionaire < Questionaire
     "Pracuję wytrwale, nawet jeśli sprawy nie idą dobrze.",
   ]
 
-  POSITIVE_FIELDS = []
+  POSITIVE_FIELDS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
   NEGATIVE_FIELDS = []
 
   EXACT_POSITIVE_FIELDS = []
