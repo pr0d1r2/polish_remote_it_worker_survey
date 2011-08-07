@@ -23,8 +23,8 @@ class OlbiQuestionaire < Questionaire
     "Kiedy pracuję, zazwyczaj czuję się pełny(a) energii",
   ]
 
-  POSITIVE_FIELDS = []
-  NEGATIVE_FIELDS = []
+  POSITIVE_FIELDS = [1, 5, 7, 10, 13, 14, 15, 16]
+  NEGATIVE_FIELDS = [2, 3, 4, 6, 8, 9, 11, 12]
 
   EXACT_POSITIVE_FIELDS = []
   EXACT_NEGATIVE_FIELDS = []
