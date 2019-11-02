@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.8'
 gem 'pg', '0.10.0'
-gem 'haml', '3.1.2'
+gem 'haml', '5.0.0'
 gem 'inherited_resources', '1.2.1'
 
 group :development do
