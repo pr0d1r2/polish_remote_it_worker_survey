@@ -4,10 +4,9 @@ gem 'rails', '3.0.8'
 gem 'pg', '0.10.0'
 gem 'haml', '3.1.2'
 gem 'inherited_resources', '1.2.1'
+gem 'json', '> 1.4.6'
 
 group :development do
-  gem 'heroku', '1.14.6'
-  gem 'taps', '0.3.15'
   gem 'wirble'
   gem 'hirb'
   gem 'awesome_print'
