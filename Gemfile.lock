@@ -131,7 +131,7 @@ GEM
     rspec_tag_matchers (1.0.0)
       nokogiri (>= 1.4.0)
       rspec-rails (>= 1.2.6)
-    rubyzip (0.9.4)
+    rubyzip (2.3.0)
     selenium-webdriver (0.2.1)
       childprocess (>= 0.1.7)
       ffi (>= 1.0.7)
